@@ -56,7 +56,7 @@ jobs:
 
       - name: run ascii
         run: |
-          chmod 700 ascii-script.sh
+          chmod 100 ascii-script.sh
           ./ascii-script.sh 
 
   second_job:
