@@ -60,7 +60,7 @@ jobs:
           ./ascii-script.sh 
       
       - name: artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: waste
           path: emo.txt
