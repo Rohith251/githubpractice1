@@ -2,21 +2,34 @@ name: My first workflow
 
 on: push
 
-jobs:
-    first_job:
-        runs-on: ubuntu-latest
-        steps:
-            - name: checkout
-              uses: actions/checkout@v4
+# jobs:
+#     first_job:
+#         runs-on: 
+#         steps:
+#             - name: checkout
+#               uses: actions/checkout@v4
             
-            - name: welcome
-              run: echo "my first message"
+#             - name: welcome
+#               run: echo "my first message"
+#                    maven --version
+#                    node --version
 
-            - name: first
-              run: echo "well"
+#             - name: first
+#               run: echo "well"
               
-            - name: list files
-              run: ls
+#             - name: list files
+#               run: ls
 
-            - name: readme
-              run: cat README.md
+#             - name: readme
+#               run: cat README.md
+
+jobs:
+  first_job:
+    runs-on: [self-hosted, linux, oracle]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run a script
+        run: |
+          echo "Running on Oracle Linux"
