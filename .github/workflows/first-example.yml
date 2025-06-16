@@ -17,7 +17,7 @@ jobs:
                    node --version
 
             - name: first
-              run: echo "well"
+              run: sh "well"
               
             - name: list files
               run: ls
