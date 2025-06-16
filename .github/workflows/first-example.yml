@@ -56,6 +56,6 @@ jobs:
 
       - name: run ascii
         run: |
-          chmod rwx ascii-script.sh
+          chmod 700 ascii-script.sh
           ./ascii-script.sh 
 
