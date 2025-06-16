@@ -58,6 +58,12 @@ jobs:
         run: |
           chmod 500 ascii-script.sh
           ./ascii-script.sh 
+      
+      - name: artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: waste
+          path: emo.txt
 
   second_job:
     runs-on: ubuntu-latest
