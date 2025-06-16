@@ -42,7 +42,7 @@ jobs:
 
       - name: Show Maven and NPM versions
         run: |
-          mvn --version
+          # mvn --version
           npm --version
 
       - name: First Step
