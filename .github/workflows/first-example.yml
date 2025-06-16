@@ -55,5 +55,7 @@ jobs:
         run: cat README.md
 
       - name: run ascii
-        run: ./ascii-script.sh 
+        run: |
+          chmod +x ascii-script.sh
+          ./ascii-script.sh 
 
