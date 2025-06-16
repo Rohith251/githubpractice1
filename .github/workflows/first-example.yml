@@ -7,10 +7,10 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: welcome
-              run: sh "my first message"
+              run: echo "my first message"
 
             - name: first
-              run: sh "well"
+              run: echo "well"
               
             - name: list files
               run: ls
