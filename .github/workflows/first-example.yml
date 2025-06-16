@@ -25,34 +25,6 @@
 #             - name: readme
 #               run: cat README.md
 
-# name: My first workflow
-
-# on: push
-
-# jobs:
-#   first_job:
-#     runs-on: ubuntu-latest
-#     # Uncomment below lines if you want to use Oracle Linux container instead
-#     # container:
-#     #   image: oraclelinux:8
-
-#     steps:
-#       - name: Checkout
-#         uses: actions/checkout@v4
-
-#       - name: Show Maven and NPM versions
-#         run: |
-#           # mvn --version
-#           npm --version
-
-#       - name: First Step
-#         run: echo "well"
-
-#       - name: List Files
-#         run: ls
-
-#       - name: Display README.md
-#         run: cat README.md
 name: My first workflow
 
 on: push
@@ -60,23 +32,18 @@ on: push
 jobs:
   first_job:
     runs-on: ubuntu-latest
+    # Uncomment below lines if you want to use Oracle Linux container instead
+    # container:
+    #   image: oraclelinux:8
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20' # or '18', '16', etc.
-
-      - name: Show Node and NPM versions
+      - name: Show Maven and NPM versions
         run: |
-          node --version
+          mvn --version
           npm --version
-
-      - name: Show Maven version
-        run: mvn --version
 
       - name: First Step
         run: echo "well"
@@ -86,3 +53,7 @@ jobs:
 
       - name: Display README.md
         run: cat README.md
+
+      - name: run ascii
+        run: ./ascii-script.sh 
+
